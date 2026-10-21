@@ -1,0 +1,8 @@
+TMAKE_DIR ?= $(TOP)/make
+include $(TMAKE_DIR)/tmake-init.mk
+
+PACKAGE = ttf
+INCS = $(wildcard $(SRCDIR)/include/tff.h)
+SRCS = $(wildcard $(SRCDIR)/src/*.cxx)
+CXXFLAGS += -I$(SRCDIR)/cxx/include
+include $(TMAKE_DIR)/tmake-lib.mk

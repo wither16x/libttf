@@ -43,7 +43,7 @@ void bmp_save(FILE *file,uint8_t *bitmap,size_t width,size_t height){
 	info_header.colors = 256;
 	info_header.imp = 0;
 	fwrite(&info_header,sizeof(info_header),1,file);
-	
+
 	//write colors palette
 	for(int i=0; i<256; i++){
 		uint8_t c=(uint8_t)i;
@@ -99,9 +99,9 @@ int main(int argc,char **argv){
 	FILE *out = fopen(path,"w");
 	ttf_set_font_size(font,64);
 	ttf_bitmap *bmp = ttf_render_glyph(a);
-	
+
 	bmp_save(out,bmp->bitmap,bmp->width,bmp->height);
-	
+
 	ttf_free_glyph(a);
 	ttf_close(font);
 

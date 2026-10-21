@@ -5,9 +5,12 @@ tconf_init "$@"
 
 tconf_search_cc "$HOST"
 tconf_require "C compiler" "$CC"
+tconf_search_cxx "$HOST"
+tconf_require "C++ compiler" "$CXX"
 tconf_find_os
 
 tconf_gen_makefiles "$SRCDIR/Makefile.in"
 tconf_gen_makefiles "$SRCDIR/demo/Makefile.in"
+tconf_gen_makefiles "$SRCDIR/cxx/Makefile.in"
 
 tconf_fini

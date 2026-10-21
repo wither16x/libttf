@@ -12,7 +12,7 @@ FILESGROUPS += PCFILES
 CFLAGS += -I$(SRCDIR)/include
 include $(TMAKE_DIR)/tmake-lib.mk
 
-SUBDIRS = demo
+SUBDIRS = cxx demo
 include $(TMAKE_DIR)/tmake-subdir.mk
 
 # automatically generate libttf.pc
