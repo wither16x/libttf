@@ -1,8 +1,10 @@
-#include "ttf.h"
+#include "ttf.hpp"
 
-const char *__ttf_error = "undefined";
-
-const char *ttf_error()
+namespace ttf
 {
-	return __ttf_error;
-}
+    const char *__ttf_error = "undefined";
+
+    const char *ttf_error(void){
+        return __ttf_error;
+    }
+} // namespace ttf

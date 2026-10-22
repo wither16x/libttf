@@ -7,6 +7,9 @@ build
 *.o
 *.tar.*
 test
+
+# data for clangd
+.cache
 compile_commands.json
 
 #for testing
